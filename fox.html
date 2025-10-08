@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.6.0/dist/aframe-extras.min.js"></script>
+
+  </head>
+  <body>
+
+    <a-scene>
+
+<a-assets>
+      <a-asset-item id="renard" src="assets/3Dmodels/aframe_tutorial_2_3Danim/assets/3Danims/fox/fox.glb"></a-asset-item>
+
+
+</a-assets>
+
+      <a-entity gltf-model="#renard" rotation="0 90 0" position="0 0 -4" scale="0.005 0.005 0.005" id="fox" animation-mixer="clip: Run; timeScale: -0.5" wasd-controls="acceleration:10"></a-entity>
+    
+      <a-plane position="0 0 -5" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
+      <a-sky color="#ECECEC"></a-sky>
+
+      <a-entity camera look-controls position="0 1.6 0"></a-entity>
+
+    </a-scene>
+  </body>
+</html>

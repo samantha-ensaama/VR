@@ -1,0 +1,23 @@
+<html>
+  <head>
+
+    <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.6.0/dist/aframe-extras.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aframe-ar@0.2.1-a/dist/aframe-ar.min.js"></script>
+
+  </head>
+  <body>
+
+    <a-scene arjs>
+
+<a-assets>
+      <a-asset-item id="cat" src="assets/3Dmodels/aframe_tutorial_2_3Danim/assets/3Danims/cat/an_animated_cat.glb"></a-asset-item>
+
+
+</a-assets>
+
+      <a-entity gltf-model="#cat" rotation="0 0 0" position="0 0 -4" scale="0.05 0.05 0.05" id="chat" animation-mixer></a-entity>
+    
+    </a-scene>
+  </body>
+</html>
