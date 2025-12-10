@@ -1,0 +1,11 @@
+Model Information:
+* title:	Tiger skull
+* source:	https://sketchfab.com/3d-models/tiger-skull-85c48890731449558fad4a33b9eedd5a
+* author:	Tavernier Amaury (https://sketchfab.com/svtavernier)
+
+Model License:
+* license type:	CC-BY-NC-SA-4.0 (http://creativecommons.org/licenses/by-nc-sa/4.0/)
+* requirements:	Author must be credited. No commercial use. Modified versions must have the same license.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Tiger skull" (https://sketchfab.com/3d-models/tiger-skull-85c48890731449558fad4a33b9eedd5a) by Tavernier Amaury (https://sketchfab.com/svtavernier) licensed under CC-BY-NC-SA-4.0 (http://creativecommons.org/licenses/by-nc-sa/4.0/)
