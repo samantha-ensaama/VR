@@ -5,6 +5,7 @@
 
 * [labyrinthe](labyrinthe.html)
 
-* [What a mess](mess.html)
+* [What a mess](whatamess.html)
+
 
 * [Cat](test_cat_AR.html)
