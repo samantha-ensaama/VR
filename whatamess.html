@@ -15,41 +15,31 @@
       <a-asset-item id="camera" src="assets/Models_3D/security_camera/scene.gltf"></a-asset-item>
   </a-assets>
 
-    <!-- Sky / fond noir pour être sûr que tout soit sombre -->
     <a-sky color="#111111"></a-sky>
-<a-entity id="room" position="0 0 -2">
 
-    <!-- Pièce : murs (utilise side: double pour voir l'intérieur) -->
-    <!-- j'ai recentré la pièce pour que la caméra soit à l'intérieur -->
-    <a-plane position="0 1.5 -3" width="6" height="3" side="double" color="#111111"></a-plane> <!-- mur arrière -->
-    <a-plane position="0 1.5 3"  width="6" height="3" side="double" color="#111111"></a-plane> <!-- mur avant -->
-    <a-plane position="-3 1.5 0" width="6" height="3" rotation="0 90 0" side="double" color="#111111"></a-plane> <!-- mur gauche -->
-    <a-plane position="3 1.5 0"  width="6" height="3" rotation="0 90 0" side="double" color="#111111"></a-plane> <!-- mur droit -->
-    <a-plane position="0 0 0"    width="6" height="6" rotation="-90 0 0" side="double" color="#111111"></a-plane> <!-- sol -->
-    <a-plane position="0 3 0"    width="6" height="6" rotation="90 0 0" side="double" color="#111111"></a-plane>  <!-- plafond -->
+<a-entity position="0 0 -2">
 
-    <!-- Modèle de l'ampoule : place-le à la même position que la lumière -->
-    <!-- Ajuste scale/position si nécessaire selon ton modèle -->
+ <!-- mur -->
+    <a-plane position="0 1.5 -3" width="6" height="3" side="double" color="#111111"></a-plane> 
+    <a-plane position="0 1.5 3"  width="6" height="3" side="double" color="#111111"></a-plane> 
+    <a-plane position="-3 1.5 0" width="6" height="3" rotation="0 90 0" side="double" color="#111111"></a-plane> 
+    <a-plane position="3 1.5 0"  width="6" height="3" rotation="0 90 0" side="double" color="#111111"></a-plane> 
+    <a-plane position="0 0 0"    width="6" height="6" rotation="-90 0 0" side="double" color="#111111"></a-plane> 
+    <a-plane position="0 3 0"    width="6" height="6" rotation="90 0 0" side="double" color="#111111"></a-plane> 
+
+<!-- modèle 3D -->
     <a-entity gltf-model="#webspider" id="bulb-model" position="0 2.7 0.3" scale="2 2 2"></a-entity>
     <a-entity gltf-model="#skull" position="-2.8 0.6 1.5" scale="1 1 1"></a-entity>
     <a-entity gltf-model="#camera" position="2 2.70 2.7" scale="0.07 0.07 0.07" rotation="0 150 -40"></a-entity>
 
-    <!-- Lumière ponctuelle (ampoule) : placée au même point que le modèle -->
-    <a-entity id="bulb-light"
-              position="0 2 0"
-              light="type: point; intensity: 2.0; distance: 5; decay: 2; color: #fff">
-    </a-entity>
-    
-   <a-cone position="0 1.65 0.25" rotation="0 0 0" height="2.4" radius-bottom="0.9" radius-top="0.05"
-              material="shader: standard; color: #fff7e8; opacity: 0.20; transparent: true; side: double; depthTest: false"
-              render-order="1"></a-cone>
+<!-- lumière -->
+    <a-entity id="bulb-light" position="0 2 0" light="type: point; intensity: 2.0; distance: 5; decay: 2; color: #fff"></a-entity>
+    <a-cone position="0 1.65 0.25" rotation="0 0 0" height="2.4" radius-bottom="0.9" radius-top="0.05" material="shader: standard; color: #fff7e8; opacity: 0.20; transparent: true; side: double; depthTest: false" render-order="1"></a-cone>
 
-   </a-entity>
+</a-entity>
 
-    <!-- Camera positionnée au centre de la pièce, hauteur yeux -->
+<!-- caméra -->
     <a-entity camera position="0 1.6 0" look-controls wasd-controls></a-entity>
-
-
 
   </a-scene>
 
