@@ -4,7 +4,8 @@
 
 * [labyrinthe](labyrinthe.html)
 
-* [What a mess](whatamess1.5.html)
+* [What a mess](whatamess.html)
+
 
 
 
