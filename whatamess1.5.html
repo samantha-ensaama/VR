@@ -1,0 +1,49 @@
+<html>
+
+<head>
+  <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
+  <script src="https://unpkg.com/@c-frame/aframe-physics-system@4.2.2/dist/aframe-physics-system.min.js"></script>
+  <script src="https://unpkg.com/aframe-look-at-component@1.0.0/dist/aframe-look-at-component.min.js"></script>
+</head>
+<body>
+
+  <a-scene background="color: #111111" fog="type: exponential; color: #111111; density: 0.40">
+
+    <a-assets>
+      <img id="wall" src="assets/Asile.jpg">
+      <a-asset-item id="ampoule" src="assets/Models_3D/light_led_bulb/scene.gltf"></a-asset-item>
+      <a-asset-item id="skull" src="assets/Models_3D/tiger_skull (2).glb"></a-asset-item>
+      <a-asset-item id="camera" src="assets/Models_3D/surveillance_camera.glb"></a-asset-item>
+      <a-asset-item id="squelette" src="assets/Models_3D/skeletons/scene.gltf"></a-asset-item>
+ </a-assets>
+
+    <a-sky color="#111111"></a-sky>
+
+<a-entity position="0 0 -2">
+
+ <!-- mur -->
+    <a-plane position="0 1.5 -3" width="6" height="3" side="double" color="#111111"></a-plane> 
+    <a-plane position="0 1.5 3"  width="6" height="3" side="double" color="#111111"></a-plane> 
+    <a-plane position="-3 1.5 0" width="6" height="3" rotation="0 90 0" side="double" color="#111111"></a-plane> 
+    <a-plane position="3 1.5 0"  width="6" height="3" rotation="0 90 0" side="double" color="#111111"></a-plane> 
+    <a-plane position="0 0 0"    width="6" height="6" rotation="-90 0 0" side="double" color="#111111"></a-plane> 
+    <a-plane position="0 3 0"    width="6" height="6" rotation="90 0 0" side="double" color="#111111"></a-plane> 
+
+<!-- modèle 3D -->
+    <a-entity gltf-model="#ampoule" id="bulb-model" position="0 2.7 0.3" scale="2 2 2"></a-entity>
+    <a-entity gltf-model="#skull" position="-2.8 0.2 1.5" scale="1.5 1.5 1.5" rotation="0 90 0" look-at="[camera]"></a-entity>
+    <a-entity gltf-model="#camera" position="2.5 2.3 1.7" scale="1.3 1.3 1.3" rotation="30 -90 0" look-at="[camera]"></a-entity>
+    <a-entity gltf-model="#squelette" position="2.6 0.6 1.5" scale="25 25 25" rotation="0 -60 0"></a-entity>
+<!-- lumière -->
+    <a-entity id="bulb-light" position="0 2 0" light="type: point; intensity: 2.0; distance: 5; decay: 2; color: #fff"></a-entity>
+    <a-cone position="0 1.65 0.25" rotation="0 0 0" height="2.4" radius-bottom="0.9" radius-top="0.05" material="shader: standard; color: #fff7e8; opacity: 0.20; transparent: true; side: double; depthTest: false" render-order="1"></a-cone>
+
+</a-entity>
+
+<!-- caméra -->
+    <a-entity camera position="0 1.6 0" look-controls wasd-controls></a-entity>
+
+  </a-scene>
+
+</body>
+</html>
