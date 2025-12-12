@@ -2,9 +2,10 @@
 
 ## VR
 
-* [labyrinthe](labyrinthe.html)
+* [Labyrinthe](labyrinthe.html)
 
 * [What a mess](whatamess.html)
+
 
 
 
